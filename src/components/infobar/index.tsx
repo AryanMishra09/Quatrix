@@ -41,15 +41,15 @@ const InfoBar = (props: Props) => {
                 className="flex font-bold flex-row "
                 href="/"
             >
-            <p className="text-3xl font-bold">Fu</p>
+            <p className="text-3xl font-bold">Qua</p>
             <Image
                 src="/fuzzieLogo.png"
                 width={15}
                 height={15}
-                alt="fuzzie logo"
+                alt="Quatrix logo"
                 className="shadow-sm"
             />
-            <p className="text-3xl font-bold">zie</p>
+            <p className="text-3xl font-bold">rix</p>
             </Link>
         </div>
         <div className='flex flex-row justify-end gap-6 items-center px-4 py-4 w-full dark:bg-black '>
