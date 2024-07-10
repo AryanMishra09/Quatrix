@@ -19,8 +19,11 @@
     ],
     "paths": {
       "@/*": ["./src/*"]
-    }
+    },
+    "types":["@uploadcare/blocks/types/jsx"]
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
   "exclude": ["node_modules"]
 }
+
+// ngrok http --domain=happily-strong-kangaroo.ngrok-free.app 80       
