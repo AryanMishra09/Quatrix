@@ -11,89 +11,81 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from '@/components/ui/tooltip'
-import Link from 'next/link'
+import { UserButton } from '@clerk/nextjs'
 import Image from 'next/image'
-// import { UserButton } from '@clerk/nextjs'
-// import { useBilling } from '@/providers/billing-provider'
-// import { onPaymentDetails } from '@/app/(main)/(pages)/billing/_actions/payment-connecetions'
+import { useBilling } from '@/providers/billing-provider'
+import { onPaymentDetails } from '@/app/(main)/(pages)/billing/_action/payment-connecetions'
 
 type Props = {}
 
 const InfoBar = (props: Props) => {
-//   const { credits, tier, setCredits, setTier } = useBilling()
+  const { credits, tier, setCredits, setTier } = useBilling()
 
-//   const onGetPayment = async () => {
-//     const response = await onPaymentDetails()
-//     if (response) {
-//       setTier(response.tier!)
-//       setCredits(response.credits!)
-//     }
-//   }
+  const onGetPayment = async () => {
+    const response = await onPaymentDetails()
+    if (response) {
+      setTier(response.tier!)
+      setCredits(response.credits!)
+    }
+  }
 
-//   useEffect(() => {
-//     onGetPayment()
-//   }, [])
+  useEffect(() => {
+    onGetPayment()
+  }, [])
 
   return (
-    <div className="flex flex-row justify-between gap-6 items-center w-full dark:bg-black ">
-        <div className='flex px-4 py-4 absolute left-0'>
-            <Link
-                className="flex font-bold flex-row "
-                href="/"
-            >
+    <div className="flex flex-row justify-between gap-6 items-center px-4 py-4 w-full dark:bg-black ">
+        <div className='flex'>
             <p className="text-3xl font-bold">Qua</p>
             <Image
-                src="/fuzzieLogo.png"
-                width={15}
-                height={15}
-                alt="Quatrix logo"
-                className="shadow-sm"
+            src="/fuzzieLogo.png"
+            width={15}
+            height={15}
+            alt="Quatrix logo"
+            className="shadow-sm"
             />
             <p className="text-3xl font-bold">rix</p>
-            </Link>
         </div>
-        <div className='flex flex-row justify-end gap-6 items-center px-4 py-4 w-full dark:bg-black '>
-            <span className="flex items-center gap-2 font-bold">
-                {/* <p className="text-sm font-light text-gray-300">Credits</p> */}
-                {/* {tier == 'Unlimited' ? (
-                <span>Unlimited</span>
-                ) : (
-                <span>
-                    {credits}/{tier == 'Free' ? '10' : tier == 'Pro' && '100'}
-                </span>
-                )} */}
+        <span className="flex items-center gap-2 font-bold">
+            <p className="text-sm font-light text-gray-300">Credits</p>
+            {tier == 'Unlimited' ? (
+            <span>Unlimited</span>
+            ) : (
+            <span>
+                {credits}/{tier == 'Free' ? '10' : tier == 'Pro' && '100'}
             </span>
-            <span className="flex items-center rounded-full bg-muted px-4">
-                <Search />
-                <Input
-                    placeholder="Quick Search"
-                    className="border-none bg-transparent"
-                />
-            </span>
-        </div>
-        <div className='flex flex-row justify-end gap-6 items-center px-4 py-4 w-full dark:bg-black mr-5'>
+            )}
+        </span>
+        <span className="flex items-center rounded-full bg-muted px-4">
+            <Search />
+            <Input
+            placeholder="Quick Search"
+            className="border-none bg-transparent"
+            />
+        </span>
+        <div className='flex flex-row gap-7 mr-4'>
             <TooltipProvider>
                 <Tooltip delayDuration={0}>
-                    <TooltipTrigger>
-                        <Headphones />
-                    </TooltipTrigger>
-                    <TooltipContent>
-                        <p>Contact Support</p>
-                    </TooltipContent>
+                <TooltipTrigger>
+                    <Headphones />
+                </TooltipTrigger>
+                <TooltipContent>
+                    <p>Contact Support</p>
+                </TooltipContent>
                 </Tooltip>
             </TooltipProvider>
             <TooltipProvider>
                 <Tooltip delayDuration={0}>
-                    <TooltipTrigger>
-                        <Book />
-                    </TooltipTrigger>
-                    <TooltipContent>
-                        <p>Guide</p>
-                    </TooltipContent>
+                <TooltipTrigger>
+                    <Book />
+                </TooltipTrigger>
+                <TooltipContent>
+                    <p>Guide</p>
+                </TooltipContent>
                 </Tooltip>
             </TooltipProvider>
+            <UserButton />
         </div>
-        {/* <UserButton /> */}
     </div>
   )
 }
