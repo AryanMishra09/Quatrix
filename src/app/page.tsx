@@ -8,6 +8,7 @@ import { Button } from "@/components/ui/button";
 import { clients, products } from "@/lib/constant";
 import { CheckIcon } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -45,6 +46,7 @@ export default function Home() {
         <HeroParallax products={products}></HeroParallax>
       </section>
       <section
+        id="price"
         className="mt-2"
       >
         <LampComponent />
@@ -70,7 +72,7 @@ export default function Home() {
                   </li>
                   <li className="flex items-center gap-2">
                     <CheckIcon />
-                    100 tasks per month
+                    10 Credits per month
                   </li>
                   <li className="flex items-center gap-2">
                     <CheckIcon />
@@ -91,7 +93,7 @@ export default function Home() {
                   as="button"
                   className="px-4 py-2 rounded-xl bg-black dark:bg-white dark:text-black text-white text-xs font-bold"
                 >
-                  Get Started Now
+                  <Link href={`/billing`}>Get Started Now</Link>
                 </CardItem>
               </div>
             </CardBody>
@@ -103,7 +105,7 @@ export default function Home() {
                 className="text-xl font-bold text-neutral-600 dark:text-white "
               >
                 Pro Plan
-                <h2 className="text-6xl ">₹ 299</h2>
+                <h2 className="text-6xl ">₹ 499</h2>
               </CardItem>
               <CardItem
                 translateZ="60"
@@ -113,11 +115,11 @@ export default function Home() {
                 up {"you'll"} never leave us after this!
                 <ul className="my-4 flex flex-col gap-2">
                   <li className="flex items-center gap-2">
-                    <CheckIcon />3 Free automations
+                    <CheckIcon />30 Free automations
                   </li>
                   <li className="flex items-center gap-2">
                     <CheckIcon />
-                    100 tasks per month
+                    100 Credits per month
                   </li>
                   <li className="flex items-center gap-2">
                     <CheckIcon />
@@ -138,7 +140,7 @@ export default function Home() {
                   as="button"
                   className="px-4 py-2 rounded-xl bg-black dark:bg-white dark:text-black text-white text-xs font-bold"
                 >
-                  Get Started Now
+                  <Link href={`/billing`}>Get Started Now</Link>
                 </CardItem>
               </div>
             </CardBody>
@@ -150,7 +152,7 @@ export default function Home() {
                 className="text-xl font-bold text-neutral-600 dark:text-white "
               >
                 Unlimited
-                <h2 className="text-6xl ">₹ 499</h2>
+                <h2 className="text-6xl ">₹ 999</h2>
               </CardItem>
               <CardItem
                 translateZ="60"
@@ -160,11 +162,11 @@ export default function Home() {
                 up {"you'll"} never leave us after this!
                 <ul className="my-4 flex flex-col gap-2">
                   <li className="flex items-center gap-2">
-                    <CheckIcon />3 Free automations
+                    <CheckIcon />Unlimited Free automations
                   </li>
                   <li className="flex items-center gap-2">
                     <CheckIcon />
-                    100 tasks per month
+                    Unlimited Credits
                   </li>
                   <li className="flex items-center gap-2">
                     <CheckIcon />
@@ -185,13 +187,16 @@ export default function Home() {
                   as="button"
                   className="px-4 py-2 rounded-xl bg-black dark:bg-white dark:text-black text-white text-xs font-bold"
                 >
-                  Get Started Now
+                  <Link href={`/billing`}>Get Started Now</Link>
                 </CardItem>
               </div>
             </CardBody>
           </CardContainer>
         </div>
       </section>
+      <footer className=" right-0 left-0 w-full mt-10 bottom-0 py-4 px-4 bg-black/40 backdrop-blur-lg z-[100] flex items-center border-b-[1px] border-neutral-900 justify-center">
+        Made with ❤️ by ARYAN MISHRA
+      </footer>
     </main>
   );
 }

@@ -36,7 +36,7 @@ const InfoBar = (props: Props) => {
   return (
     <div className="flex flex-row justify-between gap-6 items-center px-4 py-4 w-full dark:bg-black ">
         <div className='flex'>
-            <p className="text-3xl font-bold">Qua</p>
+            <p className="text-4xl font-bold">Qua</p>
             <Image
             src="/fuzzieLogo.png"
             width={15}
@@ -44,7 +44,10 @@ const InfoBar = (props: Props) => {
             alt="Quatrix logo"
             className="shadow-sm"
             />
-            <p className="text-3xl font-bold">rix</p>
+            <p className="text-4xl font-bold">rix</p>
+            <div className='mt-3'>
+              <span className='text-xs ml-5 mt-5'>-By Aryan Mishra❤️</span>
+            </div>
         </div>
         <span className="flex items-center gap-2 font-bold">
             <p className="text-sm font-light text-gray-300">Credits</p>
