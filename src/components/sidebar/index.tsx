@@ -21,7 +21,7 @@ const MenuOptions = (props: Props) => {
   const pathName = usePathname()
 
   return (
-    <nav className=" dark:bg-black h-screen max-h-screen overflow-scroll  justify-between flex items-center flex-col  gap-5 py-6 px-2">
+    <nav className=" dark:bg-black h-screen max-h-screen overflow-scroll  justify-between flex items-center flex-col  gap-5 py-6 px-4">
       <div className="flex items-center justify-center flex-col gap-4 mt-14">
         <TooltipProvider>
           {menuOptions.map((menuItem) => (
@@ -32,7 +32,7 @@ const MenuOptions = (props: Props) => {
                     <Link
                       href={menuItem.href}
                       className={clsx(
-                        'group h-8 w-8 flex items-center justify-center rounded-lg  cursor-pointer',
+                        'group h-12 w-12 flex items-center justify-center rounded-lg  cursor-pointer',
                         {
                           'dark:bg-[#2F006B] bg-[#EEE0FF] ':
                             pathName === menuItem.href,
