@@ -15,80 +15,80 @@ export const clients = [...new Array(10)].map((client, index) => ({
 export const products = [
   {
     title: 'Moonbeam',
-    link: '#',
+    link: 'https://quatrix.vercel.app/',
     thumbnail: '/p1.png',
   },
   {
     title: 'Cursor',
-    link: '#',
+    link: 'https://quatrix.vercel.app/',
     thumbnail: '/p2.png',
   },
   {
     title: 'Rogue',
-    link: '#',
+    link: 'https://quatrix.vercel.app/',
     thumbnail: '/p3.png',
   },
 
   {
     title: 'Editorially',
-    link: '#',
+    link: 'https://quatrix.vercel.app/',
     thumbnail: '/p4.png',
   },
   {
     title: 'Editrix AI',
-    link: '#',
+    link: 'https://quatrix.vercel.app/',
     thumbnail: '/p5.png',
   },
   {
     title: 'Pixel Perfect',
-    link: '#',
+    link: 'https://quatrix.vercel.app/',
     thumbnail: '/p6.png',
   },
 
   {
     title: 'Algochurn',
-    link: '#',
+    link: 'https://quatrix.vercel.app/',
     thumbnail: '/p1.png',
   },
   {
     title: 'Aceternity UI',
-    link: '#',
+    link: 'https://quatrix.vercel.app/',
     thumbnail: '/p2.png',
   },
   {
     title: 'Tailwind Master Kit',
-    link: '#',
+    link: 'https://quatrix.vercel.app/',
     thumbnail: '/p3.png',
   },
   {
     title: 'SmartBridge',
-    link: '#',
+    link: 'https://quatrix.vercel.app/',
     thumbnail: '/p4.png',
   },
   {
     title: 'Renderwork Studio',
-    link: '#',
+    link: 'https://quatrix.vercel.app/',
     thumbnail: '/p5.png',
   },
 
   {
     title: 'Creme Digital',
-    link: '#',
+    link: 'https://quatrix.vercel.app/',
     thumbnail: '/p6.png',
   },
   {
     title: 'Golden Bells Academy',
-    link: '#',
+    link: 'https://quatrix.vercel.app/',
     thumbnail: '/p1.png',
   },
   {
     title: 'Invoker Labs',
-    link: '#',
+    link: 'https://quatrix.vercel.app/',
     thumbnail: '/p2.png',
   },
   {
     title: 'E Free Invoice',
-    link: '#',
+    link: 'https://quatrix.vercel.app/',
     thumbnail: '/p3.png',
   },
 ]
