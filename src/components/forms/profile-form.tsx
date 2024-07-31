@@ -28,8 +28,8 @@ const ProfileForm = ({ user, onUpdate }: Props) => {
     mode: 'onChange',
     resolver: zodResolver(EditUserProfileSchema),
     defaultValues: {
-      name: user.name,
-      email: user.email,
+      name: user.name || 'Enter name',
+      email: user.email || 'Enter email',
     },
   })
 
