@@ -25,6 +25,7 @@ const { Provider } = context
 
 export const BillingProvider = ({ children }: WithChildProps) => {
   const [credits, setCredits] = React.useState(initialValues.credits)
+  
   const [tier, setTier] = React.useState(initialValues.tier)
 
   const values = {
